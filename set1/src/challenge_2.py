@@ -73,7 +73,6 @@ def filter_superheroes(data, filters):
 
 if __name__ == "__main__":
   parser = argparse.ArgumentParser(description="Load and validate JSON data.")
-  parser.add_argument("-f", "--file", help="Path to the JSON file.")
   parser.add_argument("--filter", help="Filter criteria in the format 'key1:value1,key2:value2,...'.")
   args = parser.parse_args()
   
