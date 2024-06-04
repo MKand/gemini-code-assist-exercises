@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Captions</title>
+    <style>
+        .image-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .image-container img {
+            max-width: 300px;
+            max-height: 300px;
+            margin-right: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Image Captions</h1>
+
+    {% if image_captions %}
+        {% for filename, caption in image_captions.items() %}
+            <div class="image-container">
+                <img src="{{ url_for('static', filename=filename) }}" alt="Image">
+                <p>{{ caption }}</p>
+            </div>
+        {% endfor %}
+    {% else %}
+        <p>No images processed yet.</p>
+    {% endif %}
+
+</body>
+</html>
