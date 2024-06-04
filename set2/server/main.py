@@ -30,7 +30,7 @@ safety_settings = {
 }
 
 @functions_framework.http
-def process_image(request):
+def http_process_image(request):
     """HTTP Cloud Function.
     Args:
         request (flask.Request): The request object.
@@ -56,13 +56,13 @@ def process_image(request):
 
         image.save(random_image_name)
         part_img = Part.from_image(Image.load_from_file(random_image_name))
-
-        response = generate(image_part=part_img, prompt=prompt)
-        
-        os.remove(random_image_name)
-
-        # Return the processed image data as a JSON response
-        return {'text': response}, 200
+        try:
+            response = generate(image_part=part_img, prompt=prompt)
+            return {'text': response}, 200
+        except Exception as e:
+            return {'error': str(e)}, 400
+        finally:
+            os.remove(random_image_name)       
     else:
         return 'Only POST requests are allowed', 405
 
