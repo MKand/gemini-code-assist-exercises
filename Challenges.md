@@ -3,6 +3,8 @@
 
 Welcome to the Superheroes and Villains Data Challenges! In these challenges, you'll work with a JSON file containing information about superheroes, villains, and their locations. You'll use Python and Gemini Code Assist to complete tasks like data loading, filtering, formatting, and transformation.
 
+Use the *set1* folder as your working directory.
+
 ## Challenge 1: Loading and Validating JSON Data
 
 1. **Create a Python app:** Write a Python script that takes the name of a JSON file as a command-line argument and loads it.
@@ -44,7 +46,7 @@ Example Test Cases:
 Transform the data: Transform the JSON data into a new format where each region is represented as a dictionary containing its name, mayor, crime rate, landmark, and lists of superheroes and villains.
 2. Save the transformed data: Save the transformed data to a new JSON file called **file2.json** in the same directory as the original file.
 
-Desired Output Format:
+Desired Output:
 
 ```json
 [

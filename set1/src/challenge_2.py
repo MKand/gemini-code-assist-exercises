@@ -2,7 +2,7 @@ import argparse
 import json
 import os
 
-print(os.getcwd())
+
 def load_and_validate_json(file_path):
   """
   Loads a JSON file and validates its structure.
@@ -28,6 +28,10 @@ def load_and_validate_json(file_path):
   except json.JSONDecodeError:
     print(f"Error: Invalid JSON format in file '{file_path}'.")
     return None
+  except Exception as e:
+    print(f"Error: {e}")
+    return None
+
 
 def filter_superheroes(data, filters):
   """
