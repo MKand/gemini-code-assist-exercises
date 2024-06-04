@@ -12,7 +12,6 @@ class GeminiImageClient:
         self.cloud_function_url = f"https://{location}-{project_id}.cloudfunctions.net/server"
 
     def generate_caption(self, image_path, prompt):
-        """Processes an image and returns the generated text."""
 
         # Load the image
         with open(image_path, "rb") as image_file:
@@ -31,20 +30,3 @@ class GeminiImageClient:
 
         # Return the generated text
         return response.json()["text"]
-
-# Example usage:
-if __name__ == "__main__":
-    # Set environment variables
-    PROJECT_ID = os.getenv("PROJECT_ID")
-    LOCATION = os.getenv("LOCATION")
-
-    # Create a client instance
-    client = GeminiImageClient(PROJECT_ID, LOCATION)
-
-    # Process an image
-    image_path = "set2/images/img1.jpg"
-    prompt = "Describe the image in a poem"
-    response = client.generate_caption(image_path, prompt)
-
-    # Print the response
-    print(response)
