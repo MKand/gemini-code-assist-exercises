@@ -41,5 +41,5 @@ We recommend starting with **Set 2** as it provides more detailed instructions a
 
 ## Disclaimer
 
-This repository is for educational purposes only and is not affiliated with Google Cloud or Gemini Code Assist. The code and instructions provided are intended to demonstrate the capabilities of Gemini Code Assist and may not be production-ready.
+This repository is for educational purposes only and is not affiliated with Google Cloud or Gemini Code Assist. The code and instructions provided are intended to demonstrate the capabilities of Gemini Code Assist and are not production-ready.
 
