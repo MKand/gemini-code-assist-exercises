@@ -5,13 +5,13 @@ from client import GeminiImageClient
 app = Flask(__name__)
 app.config['TEMPLATE_FOLDER'] = 'templates'  # Add this line
 
-def main():
-    project_id = os.environ.get("PROJECT_ID")
+def create_image_captions():
+    project_id = os.environ.get("PROJECTID")
     location = os.environ.get("LOCATION")
-    folder_path = "static"
+    folder_path = "images"
 
     if not project_id:
-        raise ValueError("Environment variable PROJECT_ID not set.")
+        raise ValueError("Environment variable for project id not set.")
 
     client = GeminiImageClient(project_id, location)
     image_captions = {}
@@ -30,7 +30,7 @@ def main():
 
 @app.route("/", methods=["GET"])
 def index():
-        image_captions = main() 
+        image_captions = create_image_captions() 
         return render_template("./index.html", image_captions=image_captions)
     
 

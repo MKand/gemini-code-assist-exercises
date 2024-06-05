@@ -1,3 +1,0 @@
-google-cloud-aiplatform
-functions-framework==3.*
-Pillow
