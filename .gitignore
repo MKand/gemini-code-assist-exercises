@@ -43,4 +43,4 @@ coverage.xml
 .gitmodules
 .DS_Store
 .env
-.venvs
+.venv
