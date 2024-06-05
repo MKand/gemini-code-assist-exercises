@@ -8,7 +8,7 @@ app.config['TEMPLATE_FOLDER'] = 'templates'  # Add this line
 def create_image_captions():
     project_id = os.environ.get("PROJECTID")
     location = os.environ.get("LOCATION")
-    folder_path = "images"
+    folder_path = "/app/static"
 
     if not project_id:
         raise ValueError("Environment variable for project id not set.")

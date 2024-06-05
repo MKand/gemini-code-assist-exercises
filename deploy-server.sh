@@ -5,7 +5,7 @@ gcloud functions deploy server \
   --gen2 \
   --region=$LOCATION \
   --runtime=python310 \
-  --source=./set2/server \
+  --source=./set2/image-caption-server \
   --entry-point=http_process_image\
   --min-instances=0\
   --trigger-http \

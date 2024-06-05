@@ -1,6 +1,7 @@
 import base64
 import requests
-import os
+import io
+from PIL import Image
 
 class GeminiImageClient:
     """A client for interacting with the Gemini image processing Cloud Function."""
@@ -15,8 +16,10 @@ class GeminiImageClient:
 
         # Load the image
         with open(image_path, "rb") as image_file:
-            image_data = image_file.read()
-            encoded_image = base64.b64encode(image_data).decode("utf-8")
+            resized_image = self.resize_image(image_file) 
+            resized_image_buffer = io.BytesIO() 
+            resized_image.save(resized_image_buffer, format="JPEG") 
+            encoded_image = base64.b64encode(resized_image_buffer.getvalue()).decode("utf-8")
 
         # Create the request data
         data = {"image": encoded_image, "prompt": prompt}
@@ -31,3 +34,11 @@ class GeminiImageClient:
         # Return the generated text
         return response.json()["text"]
 
+    # Function that takes an image and resizes it to be 200px wide while maintaining aspect ratio. 
+    def resize_image(self, image_file, width=200):
+        image = Image.open(image_file)
+        original_width, original_height = image.size
+        aspect_ratio = original_height / original_width
+        new_height = int(width * aspect_ratio)
+        resized_image = image.resize((width, new_height))
+        return resized_image
