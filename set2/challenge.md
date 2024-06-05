@@ -34,6 +34,7 @@ Template Rendering:
 
 The index.html template likely displays the images and their captions in a user-friendly way.
 In summary, this application uses a Gemini image processing Cloud Function to generate captions for images and then displays them on a web page.
+```
 
 
 You can also view Gemini Code Assist logs to see the context sent to the LLM is. One of the two files (the one that is active on the editor), and the code (not the file) in the other file in the IDE context field, along with the context are sent to the LLM. 
