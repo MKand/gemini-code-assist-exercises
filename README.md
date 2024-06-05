@@ -2,7 +2,7 @@
 
 This repository is a collection of challenges designed to showcase the capabilities of Gemini Code Assist, a powerful AI-powered coding assistant. It's not an official Google Cloud repository, but rather a custom-made project to demonstrate the potential of Gemini Code Assist in real-world coding scenarios.
 
-Solutions can be found in the `solution` branch of the repository. But, it is recommended that you find the solutions yourself by playing with Code Assist.
+Solutions can be found in the `solutions` branch of the repository. But, it is recommended that you find the solutions yourself by playing with Code Assist.
 
 ## Challenge Sets
 
