@@ -30,3 +30,4 @@ class GeminiImageClient:
 
         # Return the generated text
         return response.json()["text"]
+

@@ -1,3 +1,5 @@
+# Challenge Set: Get to know Gemini code Assist
+
 ## Task1: What does this button do?
 Lets try figuring out what this application does.
 
@@ -108,6 +110,24 @@ You can prompt Gemini further by asking:
 ```
 What is the quickest way to fix this?
 ```
+
+### Task 3: Add some code to the client.py file
+When examining the images used, you will notice that they are all of different sizes.
+Let's add a function in the client.py file to resize the image before sending it to the cloud function.
+
+Open client.py and add the following comment
+
+```
+# Function that takes an image and resizes it to be 200px wide while maintaining aspect ratio.
+```
+Examine the suggestion provided by Code Assist and accept it if it is correct.
+
+TIP: The Cloud Function server expects the image data to be in base64 format. Make sure you don't send the raw image bytes without the necessary headers to identify it as a JPEG file.
+
+
+### Task 4: HTML and CSS
+The webpage looks a bit dull and messy. Ask Gemini to help you improve it. Add a bit of your own style and flair to the webpage.
+
 
 
    

@@ -1,4 +1,4 @@
-# Challenge Set 1: Superheroes and Villains Data Challenges
+# Challenge Set: Superheroes and Villains Data Challenges. Build an app from scratch
 
 Welcome to the Superheroes and Villains Data Challenges! In these challenges, you'll work with a JSON file containing information about superheroes, villains, and their locations. You'll use Python and Gemini Code Assist to complete tasks like data loading, filtering, formatting, and transformation.
 
