@@ -1,0 +1,9 @@
+version: "3.9"
+services:
+  image-caption-viewer:
+    build: .
+    ports:
+      - "5000:5000"
+    environment:
+      PROJECT_ID: "code-assist-demo"
+      LOCATION: "us-central1"

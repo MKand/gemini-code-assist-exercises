@@ -6,8 +6,8 @@ app = Flask(__name__)
 app.config['TEMPLATE_FOLDER'] = 'templates'  # Add this line
 
 def main():
-    project_id = os.environ.get("PROJECT_ID", 'code-assist-demo')
-    location = os.environ.get("LOCATION", "us-central1")
+    project_id = os.environ.get("PROJECT_ID")
+    location = os.environ.get("LOCATION")
     folder_path = "static"
 
     if not project_id:

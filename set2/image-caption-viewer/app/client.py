@@ -1,6 +1,5 @@
 import base64
 import requests
-import os
 
 class GeminiImageClient:
     """A client for interacting with the Gemini image processing Cloud Function."""
