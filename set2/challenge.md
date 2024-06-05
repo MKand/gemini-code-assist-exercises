@@ -1,4 +1,4 @@
-# Challenge Set: Get to know Gemini code Assist
+# Challenge Set: Get to know Gemini Code Assist
 
 ## Task1: What does this button do?
 Lets try figuring out what this application does.
