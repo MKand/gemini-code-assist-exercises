@@ -8,14 +8,13 @@ Use the *set1* folder as your working directory.
 
 ## Challenge 1: Loading and Validating JSON Data
 
-1. **Create a Python app:** Write a Python script that takes the name of a JSON file as a command-line argument and loads it.
+1. **Create a Python app:** Write a Python script that takes the name of a JSON file. Use the `--file` command-line argument to specify the path to the JSON file.
 2. **Print the file name:** Print the name of the JSON file that was loaded.
-3. **Validate the JSON structure:** Ensure that the JSON data has the expected structure. Use the `--file` command-line argument to specify the JSON file.
 
 **Example Usage:**
 
 ```bash
-python challenge_1.py --file data/file.json
+python challenge_1.py --file ../data/file.json
 ```
 
 ## Challenge 2: Data Filtering
@@ -23,13 +22,13 @@ python challenge_1.py --file data/file.json
 
 Example Usage:
 ```sh
-python challenge_2.py --file data/file.json --magic
+python challenge_2.py --file ../data/file.json --magic
 ```
 2. Generic filtering: Make the filtering more generic. Add a command-line argument called --filter that allows users to specify a property and value and prints all superheroes with those properties.
 
 Example Usage:
 ```sh
-python challenge_2.py --file data/file.json --filter powers:super-strength
+python challenge_2.py --file ../data/file.json --filter powers:super-strength
 ```
 
 ## Challenge 3: Regular Expression Transformation

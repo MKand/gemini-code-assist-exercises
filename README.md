@@ -2,7 +2,9 @@
 
 This repository is a collection of challenges designed to showcase the capabilities of Gemini Code Assist, a powerful AI-powered coding assistant. It's not an official Google Cloud repository, but rather a custom-made project to demonstrate the potential of Gemini Code Assist in real-world coding scenarios.
 
-Solutions can be found in the `solutions` branch of the repository. But, it is recommended that you find the solutions yourself by playing with Code Assist.
+The challenges are tested on VSCode version 1.89 with the Gemini Code Assist version v2.11.3.
+
+Solutions can be found in the `solution` branch of the repository. But, it is recommended that you find the solutions yourself by playing with Code Assist.
 
 ## Challenge Sets
 
@@ -36,10 +38,10 @@ We recommend starting with **Set 2** as it provides more detailed instructions a
 **To get started with Set 2:**
 
 1. **Clone the repository:** `git clone https://github.com/MKand/gemini-code-assist-exercises.git`
-2. **Navigate to the `set2` directory:** `cd set2/image-caption-viewer`
-3. **Follow the instructions in the [challenge.md](set2/challenge.md) file.**
+2. **Follow the instructions in the [challenge.md](set2/challenge.md) file.**
+3. **Navigate to the `set2` directory:** `cd set2/image-caption-viewer` to do the exercises.
 
 ## Disclaimer
 
-This repository is for educational purposes only and is not affiliated with Google Cloud or Gemini Code Assist. The code and instructions provided are intended to demonstrate the capabilities of Gemini Code Assist and are not production-ready.
+This repository is for educational purposes only and is not affiliated with Google Cloud or Gemini Code Assist. The code and instructions provided are intended to demonstrate the capabilities of Gemini Code Assist and may not be production-ready.
 
