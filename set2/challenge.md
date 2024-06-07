@@ -10,6 +10,7 @@ Lets try figuring out what this application does.
 ```
 What does this application do?
 ```
+
 You should get an explanation of the code that looks something like this
 
 ```
@@ -34,7 +35,7 @@ Template Rendering:
 
 The index.html template likely displays the images and their captions in a user-friendly way.
 In summary, this application uses a Gemini image processing Cloud Function to generate captions for images and then displays them on a web page.
-
+```
 
 You can also view Gemini Code Assist logs to see the context sent to the LLM is. One of the two files (the one that is active on the editor), and the code (not the file) in the other file in the IDE context field, along with the context are sent to the LLM. 
 
@@ -79,7 +80,7 @@ This task guides you through running a Flask server that displays images with ca
 
 Start the server:
 ```sh
-docker-compose up
+docker-compose up --build
 ```
 Access the webserver: Navigate to http://localhost:5000 in your web browser.
 
@@ -98,15 +99,15 @@ You should see this error in the terminal:
 Error: FileNotFoundError: [Errno 2] No such file or directory: 'images'
 ```
 **Instructions**
-1. Provide as much context as possible: Make sure you have *app.py*, *client.py*, *Dockerfile*, *Docker-compose.yaml*, and *index.html* open to ensure it is loaded into the context. This is necessary at this stage as the current version of Code Assist does not yet index the context of the files in the local directory. This feature is still in private preview.
+1. Provide as much context as possible: Make sure you have *app.py*, *client.py*, *Dockerfile*, *Docker-compose.yaml*, and *index.html* open to ensure it is loaded into the context. This is necessary at this stage as the current version of Code Assist does not yet index the context of the files in the local directory. So, you will need to keep them open for them to be loaded into context.
 2. Ask Code Assist for help. Type in the question. 
 ```
 Why am I getting this error? Error: FileNotFoundError: [Errno 2] No such file or directory: 'images'
 ```
-The main reason this is happening is because the app is looking for images in the *app/images*, whereas the images are being mounted in the *app/static* folder. 
+The main reason this is happening is because the application is looking for images in the *app/images*, whereas the images are being mounted in the *app/static* folder in the container. 
 There are multiple ways to solve this problem
-1. Change app.py file to look for imgages in the *static* folder. OR
-2. Change the docker-compose file to mount the images in the *images* folder and the index.html file to load images from the  *images* folder. 
+1. Change app.py file to look for images in the *static* folder. OR
+2. Change the docker-compose file to mount the images into the *app/images* folder and the index.html file to load images from the  */app/images* folder. 
 I prefer option 1, because it just requires 1 change.
 
 If Code Assist offers multiple options, then you can prompt it further by asking:
@@ -118,7 +119,7 @@ What is the quickest way to fix this?
 When examining the images used, you will notice that they are all of different sizes.
 Let's add a function in the app.py file to resize the image and store them back to fit a size format (for example, 200px in height, while maintaining the aspect ratio)
 
-Open client.py and add the following comment
+Open app.py and add the following comment
 
 ```
 # Function that takes an image and resizes it to be 200px wide while maintaining aspect ratio.
