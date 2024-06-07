@@ -6,7 +6,7 @@ app = Flask(__name__)
 app.config['TEMPLATE_FOLDER'] = 'templates'  # Add this line
 
 def create_image_captions():
-    project_id = os.environ.get("PROJECTID")
+    project_id = os.environ.get("PROJECT_ID")
     location = os.environ.get("LOCATION")
     folder_path = "images"
 
