@@ -130,7 +130,3 @@ TIP: The Cloud Function server expects the image data to be in base64 format. Ma
 
 ### Task 4: HTML and CSS
 The webpage looks a bit dull and messy. Ask Gemini to help you improve it. Add a bit of your own style and flair to the webpage.
-
-
-
-   
