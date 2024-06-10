@@ -4,7 +4,7 @@ Welcome to the Superheroes and Villains Data Challenges! In these challenges, yo
 
 **Extra credit**: These exercises and solutions are built in python. But feel free to try generating code in other languages, like Go or Javascript.
 
-Use the *set1* folder as your working directory.
+Use the *set1* folder as your working directory. You can choose to use a single file or multiple files to implement the challenges.
 
 ## Challenge 1: Loading and Validating JSON Data
 
@@ -14,7 +14,7 @@ Use the *set1* folder as your working directory.
 **Example Usage:**
 
 ```bash
-python challenge_1.py --file ../data/file.json
+python main.py --file ../data/file.json
 ```
 
 ## Challenge 2: Data Filtering
@@ -22,13 +22,13 @@ python challenge_1.py --file ../data/file.json
 
 Example Usage:
 ```sh
-python challenge_2.py --file ../data/file.json --magic
+python main.py --file ../data/file.json --magic
 ```
 2. Generic filtering: Make the filtering more generic. Add a command-line argument called --filter that allows users to specify a property and value and prints all superheroes with those properties.
 
 Example Usage:
 ```sh
-python challenge_2.py --file ../data/file.json --filter powers:super-strength
+python main.py --file ../data/file.json --filter powers:super-strength
 ```
 
 ## Challenge 3: Regular Expression Transformation
