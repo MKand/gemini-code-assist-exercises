@@ -5,15 +5,17 @@ from client import GeminiImageClient
 app = Flask(__name__)
 app.config['TEMPLATE_FOLDER'] = 'templates'  # Add this line
 
+# Function that takes an image path, resizes the image to be 200px wide while maintaining aspect ratio and stores it back in the original location
+
+
 def create_image_captions():
-    project_id = os.environ.get("PROJECT_ID")
-    location = os.environ.get("LOCATION")
+    server_url = os.environ.get("SERVER_URL")
     folder_path = "images"
 
     if not project_id:
         raise ValueError("Environment variable for project id not set.")
 
-    client = GeminiImageClient(project_id, location)
+    client = GeminiImageClient(server_url)
     image_captions = {}
 
     # Get JPEG images from the folder

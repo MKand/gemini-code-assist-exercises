@@ -5,11 +5,11 @@ import os
 class GeminiImageClient:
     """A client for interacting with the Gemini image processing Cloud Function."""
 
-    def __init__(self, project_id, location):
+    def __init__(self, url):
         """Initializes the client with project ID and location."""
         self.project_id = project_id
         self.location = location
-        self.cloud_function_url = f"https://{location}-{project_id}.cloudfunctions.net/server"
+        self.cloud_function_url = f"${url}/server"
 
     def generate_caption(self, image_path, prompt):
 

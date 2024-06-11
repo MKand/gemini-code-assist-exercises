@@ -7,5 +7,4 @@ services:
     volumes:
       - ./images:/app/static
     environment:
-      - PROJECT_ID=<Enter project id> # The instructor will give you the project id. It is NOT the same project you are running these exercises from.
-      - LOCATION=us-central1
+      - SERVER_URL=<Enter URL of the server> # Ask the instructor for the URL

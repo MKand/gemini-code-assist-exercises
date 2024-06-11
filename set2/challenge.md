@@ -100,6 +100,7 @@ Error: FileNotFoundError: [Errno 2] No such file or directory: 'images'
 ```
 **Instructions**
 1. Provide as much context as possible: Make sure you have *app.py*, *client.py*, *Dockerfile*, *Docker-compose.yaml*, and *index.html* open to ensure it is loaded into the context. This is necessary at this stage as the current version of Code Assist does not yet index the context of the files in the local directory. So, you will need to keep them open for them to be loaded into context.
+
 2. Ask Code Assist for help. Type in the question. 
 ```
 Why am I getting this error? Error: FileNotFoundError: [Errno 2] No such file or directory: 'images'
@@ -117,16 +118,15 @@ What is the quickest way to fix this?
 
 ### Task 3: Add some code to the app.py file
 When examining the images used, you will notice that they are all of different sizes.
-Let's add a function in the app.py file to resize the image and store them back to fit a size format (for example, 200px in height, while maintaining the aspect ratio)
+Let's add a function in the app.py file to resize the image and store them back to fit a size format (for example, 200px in height, while maintaining the aspect ratio). 
 
 Open app.py and add the following comment
 
 ```
-# Function that takes an image and resizes it to be 200px wide while maintaining aspect ratio.
+# Function that takes an image path and resizes it to be 200px wide while maintaining aspect ratio and stores it back in the original location.
 ```
-Examine the suggestion provided by Code Assist and accept it if it is correct.
 
-TIP: The Cloud Function server expects the image data to be in base64 format. Make sure you don't send the raw image bytes without the necessary headers to identify it as a JPEG file.
+Examine the suggestion provided by Code Assist and accept it if it is correct.
 
 
 ### Task 4: HTML and CSS
